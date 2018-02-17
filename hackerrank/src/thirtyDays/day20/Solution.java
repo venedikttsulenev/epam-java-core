@@ -13,7 +13,7 @@ public class Solution {
         }
         int swaps = bubbleSort(a);
         System.out.format("Array is sorted in %d swaps.%n", swaps);
-        System.out.format("First elenent: %d%n", a[0]);
+        System.out.format("First Element: %d%n", a[0]);
         System.out.format("Last Element: %d%n", a[n - 1]);
     }
 
