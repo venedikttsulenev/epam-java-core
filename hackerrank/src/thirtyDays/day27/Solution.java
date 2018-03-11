@@ -14,15 +14,15 @@ public class Solution {
         Random random = new Random();
         System.out.println(answers.length);
         for (boolean b : answers) {
-            int N = 1 + random.nextInt(200);
-            int K = 1 + random.nextInt(N);
+            int N = 4 + random.nextInt(196);
+            int K = 3 + random.nextInt(N - 3);
             System.out.format("%d %d%n", N, K);
-            int studentsInTime = b ? random.nextInt(K) : K + random.nextInt(N - K + 1);
-            for (int i = 0; i < studentsInTime; ++i)
+            int studentsInTime = b ? 1 + random.nextInt(K - 1) : K + random.nextInt(N - K + 1);
+            for (int i = 0; i < studentsInTime - 1; ++i)
                 System.out.print(getProperTimeStudent(random) + " ");
-            for (int i = studentsInTime; i < N - 1; ++i)
+            for (int i = studentsInTime; i < N; ++i)
                 System.out.print(getLateStudent(random) + " ");
-            System.out.format("%d%n", getLateStudent(random)); /* Last student */
+            System.out.format("%d%n", 0); /* This one student who came just in time */
         }
     }
 }
